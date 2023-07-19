@@ -66,7 +66,16 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
-  gem "webdrivers"
+  gem 'capybara', '>= 2.15'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
+
 end
+
+gem 'net-smtp'
+gem "importmap-rails" #ESMとimportmapを使用して、トランスパイルやバンドルなしでRailsのモダンなJavaScriptを管理
+
+gem "turbo-rails" #JavaScriptを一切記述することなく、シングルページのWebアプリケーションのようなスピードを実現
+
+gem "stimulus-rails" #あなたがすでに持っているHTMLのための控えめなJavaScriptフレームワーク
